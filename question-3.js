@@ -1,5 +1,8 @@
+
+
+
 const getTodos = () => {	//  set a variable named geTodos equal to an arrow function
-	const request = new XMLHttpRequest();	// set variable named request to represent XMLHttpRequest
+	const request = new XMLHttpRequest();	// set variable named request to represent XMLHttpRequest instance, XMLHttp used to retrieve data from url
    
    
    request.addEventListener('readystatechange', ()=>{		// add event listener that waits for state change in order to invoke function
@@ -14,8 +17,8 @@ const getTodos = () => {	//  set a variable named geTodos equal to an arrow func
    });
    
    
-   request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');		// GET method to grab data from the url
-   request.send();															// Request sent to the server
+   request.open('GET', 'https://jsonplaceholder.typicode.com/todos/');		// GET method to grab data from the url, changes readyState to 1
+   request.send();															// Request sent to the server, changes readyState to 2
    }
    
    
